@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { FaFacebook, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+
 
 const page = () => {
     return (
@@ -28,9 +30,18 @@ const page = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary text-white">Sign Up</button>
+                            <button className="btn btn-primary text-white text-lg">Login</button>
                         </div>
-                        <p className='text-[#737373] font-semibold mt-8'>Not have an account ? <Link href={"/singup"} className='text-primary'>Sign Up</Link></p>
+                        <div className='text-center'>
+                            <p className='my-4 text-[#444444] font-semibold'>Or Sign In with</p>
+                            <div className='w-[200px] mx-auto flex justify-between'>
+                                <div className='p-4 bg-white hover:bg-[#dbdfe0] rounded-full cursor-pointer text-2xl text-[#3B5998]'><FaFacebook /></div>
+                                <div className='p-4 bg-white hover:bg-[#dbdfe0] rounded-full cursor-pointer text-2xl text-[#0A66C2]'><FaLinkedinIn /></div>
+                                <div className='p-4 bg-white hover:bg-[#dbdfe0] rounded-full cursor-pointer text-2xl text-[#EB4132]'><FaGoogle />
+                                </div>
+                            </div>
+                            <p className='text-[#737373] font-semibold mt-8'>Not have an account yet ? <Link href={"/singup"} className='text-primary'>Sign Up</Link></p>
+                        </div>
                     </form>
                 </div>
             </div>
